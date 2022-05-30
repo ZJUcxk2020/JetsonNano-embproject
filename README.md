@@ -1,2 +1,3 @@
-This is the repo for 2022 embed system project
+# Jetson-nano Project
 
+该仓库用来存储嵌入式系统大作业相关的代码
