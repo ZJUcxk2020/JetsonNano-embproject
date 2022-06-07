@@ -4,8 +4,9 @@ import datetime
 def setupguiwindow():
     sg.theme('DarkAmber')   # 设置当前主题
     layout = [  [sg.Text('Enter the name of the class or meeting'), sg.InputText()],
-            [sg.Text('Setup starttime'),sg.InputText(),sg.Text("All time Format:Year-Month-Day Hour:Minute")],    
-            [sg.Text('Acceptable Delay time'),sg.InputText(),sg.Text('Length of the class'),sg.InputText()],
+            [sg.Text("All time Format:Year-Month-Day Hour:Minute")],
+            [sg.Text('Class starttime'),sg.InputText(),sg.Text('Length of the class'),sg.InputText()],    
+            [sg.Text('Acceptable Delay time'),sg.InputText()],
             [sg.Text('Sign in starttime:'),sg.InputText()],
             [sg.Text('Sign out starttime:'),sg.InputText(),sg.Text('Duaration'),sg.InputText()],
             [sg.Button('Ok')] ]
@@ -17,11 +18,11 @@ def setupguiwindow():
 
 #print(values)
     classname = values[0]
-    starttime = time_date = datetime.datetime.strptime(values[1], "%Y-%m-%d %H:%M")
+    starttime = values[1]
     delay = int(values[2])
     length = int(values[3])
-    signin = time_date = datetime.datetime.strptime(values[4], "%Y-%m-%d %H:%M")
-    signout = time_date = datetime.datetime.strptime(values[5], "%Y-%m-%d %H:%M")
+    signin = values[4]
+    signout = values[5]
     signoutdur = int(values[6])
     window.close()
     return classname,starttime,delay,length,signin,signout,signoutdur
