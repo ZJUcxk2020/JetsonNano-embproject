@@ -23,16 +23,16 @@ def getFileList(dir, Filelist, ext=None):
     return Filelist
 
 
-# org_img_folder = r'./pictures/'
+#org_img_folder = r'./pictures/'
 
-# # 检索文件
-# imglist = getFileList(org_img_folder, [], 'jpg')
-# print('本次执行检索到 ' + str(len(imglist)) + ' 个jpg文件\n')
+#检索文件
+#imglist = getFileList(org_img_folder, [], 'jpg')
+#print('本次执行检索到 ' + str(len(imglist)) + ' 个jpg文件\n')
 
 
-# for imgpath in imglist:
-#     imgname = os.path.splitext(os.path.basename(imgpath))[0]
-#     print(imgpath)
-#     img = cv2.imread(imgpath, cv2.IMREAD_COLOR)
-#     cv2.imshow("img",img)
-#     cv2.waitKey(0)
+#for imgpath in imglist:
+#    imgname = os.path.splitext(os.path.basename(imgpath))[0]
+#    print(imgpath)
+#    img = cv2.imread(imgpath, cv2.IMREAD_COLOR)
+#    cv2.imshow("img",img)
+#    cv2.waitKey(0)
