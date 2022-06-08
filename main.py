@@ -10,6 +10,7 @@ import startupgui
 import matplotlib.pyplot as plt
 from math import *
 import threading
+import readfile
 attend_people=0
 delay_people=0
 early_people=0
@@ -29,7 +30,7 @@ for imgpath in jpglist:
 
 print("The number of the students is %d:" %len(known_face_names))
 people_cnt=len(known_face_names)
-
+telephonedic = readfile.readtelephone()
 
 def run_show():
     #print("I'm here")
@@ -64,7 +65,8 @@ app = Flask("server") # 创建一个Flask实例
 def ret_pic_encoding(): # URL的处理函数
     json_data={"pic_encodings":known_face_encodings,"pic_names":known_face_names,
     "class_name":classname,"start_time":starttime,"delay_time":delay,"class_length":length,
-    "signin_time":signin,"signout_time":signout,"signout_duration":signoutdur}
+    "signin_time":signin,"signout_time":signout,"signout_duration":signoutdur,
+    "telephonedic":telephonedic}
     r = requests.post("http://192.168.137.7:5000/get_encoding", json=json_data,timeout=3)
     print(r.text)
     return "success"

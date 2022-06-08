@@ -28,7 +28,7 @@ def getFileList(dir, Filelist, ext=None):
 #检索文件
 #imglist = getFileList(org_img_folder, [], 'jpg')
 #print('本次执行检索到 ' + str(len(imglist)) + ' 个jpg文件\n')
-
+#print(imglist)
 
 #for imgpath in imglist:
 #    imgname = os.path.splitext(os.path.basename(imgpath))[0]
